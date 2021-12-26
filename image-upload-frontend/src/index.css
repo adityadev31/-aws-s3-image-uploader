@@ -1,0 +1,160 @@
+* {
+   margin: 0;
+   padding: 0;
+   box-sizing: border-box;
+}
+
+html, body {
+   width: 100vw;
+   overflow-x: hidden;
+}
+
+.uploadPage {
+   width: 100vw;
+   min-height: 100vh;
+   padding: 2rem;
+   position: relative;
+}
+
+.uploadPage .alertBox {
+   position: absolute;
+   top: -10%;
+   width: 90vw;
+   left: 50%;
+   transform: translateX(-50%);
+   text-align: center;
+   background-color: rgb(255, 220, 155);
+   color: rgb(148, 96, 0);
+   border-radius: 1rem;
+   padding: 2rem;
+   z-index: 99;
+   font-size: 1.5rem;
+   opacity: 0;
+   transition: all 0.6s ease;
+   box-shadow: 0px 10px 20px 0px rgba(0,0,0,0.1);
+}
+.uploadPage .alertBox.down {
+   top: 10px;
+   opacity: 1;
+}
+.uploadPage .alertBox.up {
+   top: -10%;
+   opacity: 0;
+}
+
+.uploadPage .display {
+   width: 60vw;
+   margin: 0 auto;
+   height: 300px;
+   border-radius: 10px;
+   border: 3px dashed rgb(85, 85, 85);
+   background-color: rgb(221, 221, 221);
+   color: rgb(85, 85, 85);
+   position: relative;
+}
+
+.uploadPage .display .imgDisplay {
+   width: 100%;
+   height: 100%;
+   overflow: hidden;
+}
+
+.uploadPage .display .imgDisplay img {
+   width: 100%;
+   height: 100%;
+   object-fit: cover;
+}
+
+.uploadPage .display input {
+   display: none;
+}
+
+.uploadPage .display label {
+   position: absolute;
+   bottom: -10px;
+   right: -10px;
+   display: block;
+   border-radius: 50%;
+   padding: 10px 14px;
+   cursor: pointer;
+   background-color: #fff;
+   color: rgb(114, 114, 114);
+   font-size: 1.5rem;
+   box-shadow: 0px 10px 20px 0px rgba(0,0,0,0.1);
+   z-index: 10;
+}
+
+.uploadPage .display p {
+   position: absolute;
+   top: 50%;
+   left: 50%;
+   transform: translate(-50%, -50%);
+   font-size: 2rem;
+   text-align: center;
+}
+
+.uploadPage select {
+   display: block;
+   margin: 3rem auto;
+   padding: 1rem;
+   font-size: 1.2rem;
+   border-radius: 8px;
+   outline: none;
+   border: none;
+   box-shadow: 0 10px 20px 0px rgba(0,0,0,0.1);
+   color: rgb(145, 145, 145);
+}
+
+.uploadPage button {
+   display: block;
+   margin: 3rem auto 0 auto;
+   padding: 1rem 2rem;
+   background-color: orange;
+   color: white;
+   border: none;
+   font-size: 1.5rem;
+   border-radius: 10px;
+   cursor: pointer;
+}
+
+.uploadPage .done {
+   text-align: center;
+   color: rgb(95, 255, 47);
+   margin-top: 1.5rem;
+   display: none;
+}
+
+.uploadPage .done.active {
+   display: block;
+}
+
+.uploadPage .error {
+   text-align: center;
+   color: rgb(255, 47, 109);
+   margin-top: 1.5rem;
+   display: none;
+}
+
+.uploadPage .error.active {
+   display: block;
+}
+
+.uploadPage .progress {
+   text-align: center;
+   color: rgb(95, 255, 47);
+   margin-top: 1.5rem;
+   display: none;
+}
+
+.uploadPage .progress.active {
+   display: block;
+}
+
+.uploadPage .url {
+   text-align: center;
+   margin-top: 0.5rem;
+}
+.uploadPage .url a {
+   text-decoration: none;
+   color: rgb(0, 132, 255);
+}
